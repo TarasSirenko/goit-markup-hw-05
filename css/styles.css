@@ -51,6 +51,21 @@ p {
   overflow: hidden;
 }
 /* ------------------------heder------------------------ */
+/* ------------------------heder scrol------------------------ */
+
+.heder-scrol {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.heder-scrol:hover {
+  opacity: 1;
+}
+/* ------------------------heder skrol------------------------ */
+
 .container-heder a {
   display: block;
 }
@@ -70,6 +85,7 @@ p {
   align-items: center;
 
   border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
 }
 /* -------logo----- */
 .logo {
@@ -80,6 +96,7 @@ p {
   line-height: 1.192;
   letter-spacing: 0.03em;
   color: var(--title-color);
+  animation-duration: 1000ms;
 }
 .logo-accent {
   color: var(--accent-color);
@@ -153,6 +170,9 @@ p {
 }
 
 /* ------------------------end heder------------------------ */
+.main {
+  padding: ;
+}
 /* -------------------------hero----------------------------- */
 .hero {
   text-align: center;
@@ -206,14 +226,16 @@ p {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transform: scale(1);
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -225,6 +247,7 @@ p {
   position: absolute;
   top: 8px;
   right: 8px;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
@@ -234,19 +257,13 @@ p {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.modal-button::before {
-  content: '';
-  width: 11px;
-  height: 11px;
-  display: block;
-  background-image: url(../images/svg/close.svg);
-}
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 /* -------------------------end modal window----------------------------- */
 /* -------------------------end hero----------------------------- */
@@ -424,14 +441,19 @@ p {
 .social-list .item:not(:last-child) {
   margin-right: 10px;
 }
+
 .social-list .link {
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .social-list .link:hover,
 .social-list .link:focus {
   background-color: var(--accent-color);
+}
+.social-list .link .icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list .link:hover .icon,
 .social-list .link:focus .icon {
