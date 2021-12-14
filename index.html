@@ -358,7 +358,7 @@
                         <label>
                             <span class="label">Имя</span>
                             <input type="text" name="user-name" class="field">
-                            <svg class="icon" width=24px height=24px>
+                            <svg class="icon" width=18px height=18px>
                                 <use href="./images/svg/sprite.svg#icon-person"></use>
                             </svg>
                         </label>
@@ -369,7 +369,7 @@
                         <label>
                             <span class="label">Телефон</span>
                             <input type="tel" name="phone-namber" class="field">
-                            <svg class="icon" width=24px height=24px>
+                            <svg class="icon" width=18px height=18px>
                                 <use href="./images/svg/sprite.svg#icon-phone-form"></use>
                             </svg>
                         </label>
@@ -380,7 +380,7 @@
                         <label>
                             <span class="label">Почта</span>
                             <input type="email" name="mail"  class="field" >
-                            <svg class="icon" width=24px height=24px>
+                            <svg class="icon" width=18px height=18px>
                                 <use href="./images/svg/sprite.svg#icon-email-form"></use>
                             </svg>
                         </label>
@@ -390,19 +390,20 @@
                 <p class="comments">
                     <label class="comments-label">
                         <span class="label">Комментарий</span>
-                        <textarea name="comments" placeholder="Введите текст" rows="5" class="comments-field">
-                        </textarea>
+                        <textarea name="comments" placeholder="Введите текст" class="comments-field"></textarea>
                     </label>
                 </p>
                 <div class="checkbox-wraper">
                     <label class="checkbox-label">
-                        <span class="icon"></span>
-                        <p>
-                            <input type="checkbox" name="checkbox" class="checkbox">
-                            <span>Соглашаюсь с рассылкой и принимаю</span>
-                            <a class="link">Условия договора</a>
-                        </p>
+                            <input type="checkbox" name="user policy" class="checkbox" value="agree" required>
+                            <span class="icon">
+                            </span>
+                            <p>
+                                <span>Соглашаюсь с рассылкой и принимаю</span>
+                                <a href="" class="link">Условия договора</a>
+                            </p>
                     </label>
+                    
                 </div>
                 <button type="submit" class="sending-button">Отправить</button>
             </form>
